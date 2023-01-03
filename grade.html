@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="myfun()">Enter</button>
+    <p id="demo"></p>
+
+    <script>
+        function myfun()
+        {
+            let a=Number(document.getElementById("input").value);
+            let b;
+            if(a>=90)
+            {
+                b="A Grade";
+            }
+            else if(a>=80 && a<90)
+            {
+                b="B Grade";
+            }
+            else if(a>=70 && a<80)
+            {
+                b="C Grade";
+            }
+            else if(a>=60 && a<70)
+            {
+                b="D Grade";
+            }
+            else
+            {
+                b="Failed";
+            }
+            document.getElementById("demo").innerHTML=b;
+        }
+
+    </script>
+
+</body>
+</html>
