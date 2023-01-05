@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function valform()
+        {
+            c
+            var Name=document.myform.name.value;
+            var password=document.myform.password.value;
+            var phone=document.myform.phone.value;
+            var email=document.myform.email.value;
+            var atPosition=email.indexOf("@");
+            var dotPosition=email.lastIndexOf(".");
+
+            if(Name==null || Name=="")
+            {
+                alert("Name cant be null");
+                return false;
+            }
+            if(password.length<6)
+            {
+                alert("passwrd contains atleast 6 charactors");
+                return false;
+            }
+            if(isNaN(phone))
+            {
+                alert("enter numeric value");
+                return false;
+            }
+            if(atPosition<1 || dotPosition<atPosition+2 || dotPosition+2>=email.length)
+                {
+                    alert("please enter a valid email");
+                    return false;
+                }
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" method="post" onsubmit="return valform()">
+        Name:<input type="text" name="name"><br><br>
+        Password:<input type="password" name="password"><br><br>
+        Email:<input type="email" name="email"><br><br>
+        Phone:<input type="text" name="phone"><br><br>
+        <input type="submit" value="register">
+    </form>
+
+    
+</body>
+</html>
